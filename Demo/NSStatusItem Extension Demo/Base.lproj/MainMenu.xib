@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="NSStatusItem_Extension_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="O56-Na-Xnt" id="kZw-Fo-fOi"/>
+                <outlet property="field" destination="oIx-26-dcP" id="IEG-v0-wdM"/>
+                <outlet property="statusMenu" destination="wgc-hq-MKe" id="vER-bl-qmh"/>
+                <outlet property="window" destination="IaY-y3-sx5" id="UGI-93-VqE"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="NSStatusItem Extension Demo" systemMenu="apple" id="wgc-hq-MKe" userLabel="Menu">
+            <items>
+                <menuItem title="About NSStatusItem Extension Demo" id="zVh-gc-xch">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="h5e-av-AoB"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="vNO-RY-IJf"/>
+                <menuItem title="Quit NSStatusItem Extension Demo" keyEquivalent="q" id="17i-82-F01">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="0RI-j5-rt8"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="356" y="289.5"/>
+        </menu>
+        <window title="Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="IaY-y3-sx5">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="213" y="227" width="270" height="95"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1130"/>
+            <view key="contentView" id="HYs-G8-2fE">
+                <rect key="frame" x="0.0" y="0.0" width="270" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-uK-cuy">
+                        <rect key="frame" x="20" y="58" width="32" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="NJa-Bb-Ldd">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-26-dcP">
+                        <rect key="frame" x="58" y="55" width="192" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="5dE-8L-arA">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="setTitle:" target="Voe-Tx-rLC" id="dZQ-19-hAb"/>
+                        </connections>
+                    </textField>
+                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O56-Na-Xnt">
+                        <rect key="frame" x="20" y="18" width="230" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="Enable" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ifF-Hj-zQu">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="switchEnabled:" target="Voe-Tx-rLC" id="bje-K1-N0m"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="367" y="506.5"/>
+        </window>
+    </objects>
+</document>
